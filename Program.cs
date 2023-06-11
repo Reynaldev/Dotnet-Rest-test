@@ -16,9 +16,9 @@ namespace Dotnet_Rest_test
             // Get REST API content
             var response = await client.GetAsync("https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=18ccbbd129b7bdecaaf072a9f9977f01");
             // Convert json into string
-            string result = await response.Content.ReadAsStringAsync();
+            string content = await response.Content.ReadAsStringAsync();
             // Insert data into the OpenWeather class
-            weather = JsonSerializer.Deserialize<OpenWeather>(result);
+            weather = JsonSerializer.Deserialize<OpenWeather>(content);
 
             // Output
             Console.WriteLine($"Timezone: {weather.timezone}");
