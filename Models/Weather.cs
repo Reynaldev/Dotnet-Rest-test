@@ -13,7 +13,7 @@ namespace Dotnet_Rest_test.Models
         public decimal? temp { get; set; }
         public int? pressure { get; set; }
         public int? humidity { get; set; }
-        // public Weather weather { get; set; }
+        public List<Weather> weather { get; set; }
     }
 
     public class Weather

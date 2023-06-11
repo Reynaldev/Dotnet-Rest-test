@@ -21,9 +21,11 @@ namespace Dotnet_Rest_test
             weather = JsonSerializer.Deserialize<OpenWeather>(result);
 
             // Output
+            Console.WriteLine($"Timezone: {weather.timezone}");
             Console.WriteLine($"Temp: {weather.current.temp}");
             Console.WriteLine($"Pressure: {weather.current.pressure}");
             Console.WriteLine($"Humidity: {weather.current.humidity}");
+            Console.WriteLine($"Id: {weather.current.weather[0].id}");
         }
     }
 }
